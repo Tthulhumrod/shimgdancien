@@ -13,16 +13,21 @@ shimGdAncien.GameEngine = function (){
 
 shimGdAncien.GameEngine.prototype ={
   gameLoop: function (){
-
+    shimGdAncien.localMap.gameLoop();
+    shimGdAncien.localMap.render();
   },
 
   init : function(){
-    ageofshimrod.canvas = new ageofshimrod.Canvas();
-    ageofshimrod.canvas.init();
-    ageofshimrod.canvas.setCanvasSize(window.innerWidth,window.innerHeight);
-    ageofshimrod.canvas.canvasMouse.addEventListener("click",ageofshimrod.gameEngine.clickEvent);
-    ageofshimrod.canvas.canvasMouse.addEventListener("mousemove",ageofshimrod.gameEngine.mouseMove);
-    ageofshimrod.tileset = new ageofshimrod.Tileset();
+    shimGdAncien.canvas = new shimGdAncien.Canvas();
+    shimGdAncien.canvas.init();
+    shimGdAncien.canvas.setCanvasSize(window.innerWidth,window.innerHeight);
+    shimGdAncien.canvas.canvasMouse.addEventListener("click",shimGdAncien.gameEngine.clickEvent);
+    shimGdAncien.canvas.canvasMouse.addEventListener("mousemove",shimGdAncien.gameEngine.mouseMove);
+    shimGdAncien.tileset = new shimGdAncien.Tileset();
+
+    shimGdAncien.localMap = new shimGdAncien.LocalMap();
+    shimGdAncien.localMap.init();
+
   }
 
 }

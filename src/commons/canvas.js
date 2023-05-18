@@ -1,14 +1,14 @@
 'use strict';
-var ageofshimrod = ageofshimrod || {};
+var shimGdAncien = shimGdAncien || {};
 
-ageofshimrod.Canvas = function (){
+shimGdAncien.Canvas = function (){
   this.canvasTile = undefined;
   this.canvasCreature = undefined;
   this.canvasAnimation = undefined;
   this.canvasMouse = undefined;
 };
 
-ageofshimrod.Canvas.prototype ={
+shimGdAncien.Canvas.prototype ={
   init : function(){
     this.canvasTile = document.getElementById("layerTile");
     this.canvasCreature = document.getElementById("layerCreature");
